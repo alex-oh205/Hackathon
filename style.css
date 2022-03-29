@@ -1,0 +1,392 @@
+body {
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+}
+
+.textclass {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 70px;
+  text-align: center;
+  color: rgb(226, 226, 226);
+  font-size: 24px;
+  animation: 0.5s ease-out 0.1s 1 slideInFromRight;
+  animation-fill-mode: backwards;
+}
+
+p {
+  display: inline-block;
+  width: 30%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#abouttext {
+  color: #000b1c;
+}
+
+.profileimages {
+  border-radius: 10000px;
+  height: 25%;
+  width: 25%;
+  margin-top: 25px;
+}
+
+.imagediv {
+  float: left; 
+  display: inline;
+  margin: auto;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  font-family: 'Open Sans', sans-serif;
+  transition: background-color 0.25s;
+}
+
+.logo-img {
+  margin-left: 20px;
+  align-self: center;
+}
+
+.title, .title a {
+  color: #9d1010;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 10px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 20px;
+  align-self: center;
+  red-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  position: absolute;
+  right: 0;
+  justify-content: flex-end;
+  align-self: center;
+}
+
+.nav-links li {
+  list-style: none;
+  display: inline-block;
+}
+
+.nav-links a {
+  color: #9d1010;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 16px 24px;
+  margin-right: 20px;
+  transition: background-color 0.25s, color 0.25s;
+}
+
+.nav-links li a.change-color-text:hover {
+  background-color: red;
+  color: #9d1010;
+  transition: background-color 0.25s, color 0.25s;
+}
+
+.nav-links li a:hover {
+  color: red;
+  transition: color 0.25s;
+}
+
+.nav-links li a.page-links.active {
+  background-color: rgb(226, 226, 226);
+  color: #9d1010;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #9d1010;
+  margin: 5px;
+  transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.25s;
+}
+
+.dark-cover {
+  visibility: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 9998;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.3s ease-in;
+}
+
+@media screen and (max-width:700px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 100vh;
+    top: 0;
+    margin: 0px;
+    padding: 0px;
+    background-color: #9d1010;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .nav-links li {
+    opacity: 0;
+    display: block;
+    width: 100%;
+  }
+  .nav-links a {
+    color: rgb(226, 226, 226);
+    display: inline-block;
+    padding: 0;
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+  }
+  .nav-links li a:hover {
+    background-color: red;
+    color: #9d1010;
+    transition: background-color 0.25s, color 0.25s;
+      
+  }
+  .nav-links a.page-links {
+    red-space: nowrap;
+  }
+  .burger {
+    display: block;
+    align-self: center;
+    position: absolute;
+    right: 20px;
+  }
+  .title {
+    display: none;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+.cover-active {
+  visibility: visible;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.disable-scroll {
+  overflow-y: hidden;
+}
+
+.burger div.change-color-burger {
+  background-color: rgb(226, 226, 226);
+}
+
+.change-color {
+  background-color: #9d1010;
+  transition: background-color 0.25s;
+}
+
+.title a.change-color-text {
+  color: rgb(226, 226, 226);
+  transition: color 0.25s;
+}
+
+.nav-links a.change-color-text {
+  color: rgb(226, 226, 226);
+  transition: color 0.25s;
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+  background-color: rgb(226, 226, 226);
+}
+
+.toggle .line2 {
+  background-color: rgb(226, 226, 226);
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+  background-color: rgb(226, 226, 226);
+}
+
+.flex-container {
+  display: flex;
+  margin-top: 75px;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.widget {
+  border-width: 2pt;
+  border-radius: 3pt;
+  border-color: #9d1010;
+  background-color: #d1d1d1;
+  margin: 10px;
+  padding: 4px;
+  flex: 1;
+}
+
+.big-image {
+  height: 50vh;
+  width: 25vw;
+  flex: 1;
+}
+
+.small-image {
+  height: 50vh;
+  width: 25vw;
+  flex: 1;
+}
+
+.tiny-image {
+  height: 50vh;
+  width: 25vw;
+  flex: 1;
+}
+
+.filter {
+  float: left;
+  height: 100vh;
+  width: 25vw;
+}
+
+.body {
+  
+}
+
+.footer, .footer a {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  background-color: #9d1010;
+  color: rgb(226, 226, 226);
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  flex-direction: row;
+  justify-content: space-around;
+  align-self: center;
+  transition: color 0.25s;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+  color: red;
+  transition: color 0.25s;
+}
+
+h1 {
+  display: block;
+  font-family: "Open Sans", sans-serif;
+  font-size: 48px;
+  margin-top: 100px;
+  text-align: center;
+  background-color: #000b1c;
+  color: rgb(226, 226, 226);
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  animation: 0.5s ease-out 0s 1 slideInFromRight;
+  animation-fill-mode: backwards;
+}
+
+.underline {
+  position: relative;
+  width: 30%;
+  height: 10px;
+  margin-top: -10px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #000b1c;
+  animation: 0.25s ease-out 0.5s 1 expand;
+  animation-fill-mode: backwards;
+}
+
+.main-banner {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.donate-banner {
+  background-image: url(images/banner1.png);
+}
+
+.about-banner {
+  background-image: url(images/banner2.png);
+}
+
+.contact-banner {
+  background-image: url(images/banner3.png)
+}
+
+.main {
+  width: 100%;
+  animation: 0.5s ease-out 0.1s 1 slideInFromRight;
+  animation-fill-mode: backwards;
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes expand {
+  from {
+    width: 0;
+  }
+  to {
+    width: 30%;
+  }
+}
