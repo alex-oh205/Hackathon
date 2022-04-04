@@ -68,7 +68,7 @@ nav {
   letter-spacing: 3px;
   font-size: 20px;
   align-self: center;
-  white-space: nowrap;
+  red-space: nowrap;
 }
 
 .nav-links {
@@ -177,7 +177,7 @@ nav {
       
   }
   .nav-links a.page-links {
-    white-space: nowrap;
+    red-space: nowrap;
   }
   .burger {
     display: block;
@@ -287,6 +287,10 @@ nav {
   float: left;
   height: 100vh;
   width: 25vw;
+}
+
+.body {
+  
 }
 
 .footer, .footer a {

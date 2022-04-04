@@ -51,7 +51,9 @@ nav {
   height: 50px;
   display: flex;
   font-family: 'Open Sans', sans-serif;
-  transition: background-color 0.25s;
+  background-image: linear-gradient(rgba(255, 255, 255, 50), transparent);
+  background-color: none;
+  transition: background-color, background-image 0.25s;
 }
 
 .logo-img {
@@ -68,7 +70,7 @@ nav {
   letter-spacing: 3px;
   font-size: 20px;
   align-self: center;
-  white-space: nowrap;
+  red-space: nowrap;
 }
 
 .nav-links {
@@ -177,7 +179,7 @@ nav {
       
   }
   .nav-links a.page-links {
-    white-space: nowrap;
+    red-space: nowrap;
   }
   .burger {
     display: block;
@@ -208,8 +210,9 @@ nav {
 }
 
 .change-color {
+  background-image: none;
   background-color: #9d1010;
-  transition: background-color 0.25s;
+  transition: background-color, background-image 0.25s;
 }
 
 .title a.change-color-text {

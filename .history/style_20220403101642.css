@@ -51,6 +51,7 @@ nav {
   height: 50px;
   display: flex;
   font-family: 'Open Sans', sans-serif;
+  background-color: rgba(226, 226, 226, 0.1);
   transition: background-color 0.25s;
 }
 
